@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title>TheCrock</title>
+    <author>G.Cyrille</author>
+    <version>0.1</version>
+	<date>07/12/2023</date>
+    <site>https://pluxthemes.com</site>
+    <description><![CDATA[Chaudron à plugins, creer le squelette d'un plugin multilingue dans un fichier zip. 
+    Options : 
+        * page static en front 
+        * hook widget 
+        * wizard (aide à la configuration)
+        * page de config 
+        * page d'admin 
+        * hooks et fonctions personnel 
+        * selection hooks et fonctions natives
+        * upload icon convertie au format png
+        * Parametres de type : string, cdata ou numeric
+        Inclus: fichier lang en fr
+     
+      - | Gain de temps appréciable avec un squelette déjà fonctionnel | - ]]></description>
+    <scope></scope>
+</document>
