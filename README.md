@@ -1,11 +1,15 @@
 # theCrock
-Chaudron à Plugin pour PluXml. genere le squelette d'un plugin .Options fonctionnelles(widget,static,admin,config et wizard)
+
+En complement à la documentation :Créer un plugin  https://wiki.pluxml.org/docs/develop/plugins/index.html
+
+## Chaudron à Plugin pour PluXml. 
+genere le squelette d'un plugin .Options fonctionnelles(widget,static,admin,config et wizard)
 
 Au travers des fenêtres de configuration, vous pourrez créer la base de votre plugin et **gagner un temps précieux**. 
 
 Votre squelette de plugin sera conpatible avec le plugin multilingue.
 
-Les composants:
+## Les composants:
 
    * Dossiers (css,js,img,assets)
    * Page d'administration
@@ -25,6 +29,6 @@ Les declarations de fonctions sont précodées et vides de codes, sauf celle inj
 
 Vous disposerez d'un ecrin tout bien préparer pour cela.
 
-Des bogues ou des suggestions, interagissez ici ou sur le form de pluxml @ https://forum.pluxml.org/
+Des bogues ou des suggestions, interagissez ici ou sur le form de pluxml @ https://forum.pluxml.org/ ou directement dans le sujet de présentation du plugin @ https://forum.pluxml.org/discussion/7570/plugin-thecrock-utilitaire-genere-le-squelette-dun-plugin
 
 bon codage
