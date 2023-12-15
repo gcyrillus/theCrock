@@ -537,7 +537,7 @@
 					<fieldset>
 						<legend>Hooks des thèmes</legend>
 						<label for="ThemeParam">Theme</label>
-						<select name="ThemedParam[]" id="Theme" multiple>
+						<select name="ThemeParam[]" id="Theme" multiple>
 							<option value><?= $plxPlugin->lang('L_NONE_IN_LIST') ?></option>
 							<option disabled>ThemeEndHead</option>
 							<option>ThemeEndBody</option>
