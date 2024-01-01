@@ -32,10 +32,15 @@
 	#ajout hook wizard
 	$plxPlugin->selectedHooks[]='wizard';
 	$wizarLink=' <a href="parametres_plugin.php?p=<?= basename(__DIR__) ?>&wizard" class="aWizard"><img src="<?= PLX_PLUGINS.basename(__DIR__)?>/img/wizard.png" style="height:2em;vertical-align:middle" alt="Wizard"> Wizard</a>';
-	$callWizard ='	# fermeture du wizard
-	if (isset($_SESSION[\'justactivated\'.basename(__DIR__)])) {unset($_SESSION[\'justactivated\'.basename(__DIR__)]);}
-	# affichage du wizard à la demande
-	if(isset($_GET[\'wizard\'])) {$_SESSION[\'justactivated\'.basename(__DIR__)] = true;}';
+	$callWizard =PHP_EOL.'
+				# affichage du wizard à la demande
+				if(isset($_GET[\'wizard\'])) {$_SESSION[\'justactivated\'.basename(__DIR__)] = true;}
+				# fermeture session wizard
+				if (isset($_SESSION[\'justactivated\'.basename(__DIR__)])) {
+					unset($_SESSION[\'justactivated\'.basename(__DIR__)]);
+					$this->wizard();
+					}
+			';
 	
 	}
 	
@@ -265,7 +270,7 @@
 	
 	#insertion du wizard dans la fonction onactivate();
 	$plxPlugin->bone = $plxPlugin->updateBoneString('@###wizardShow###@',$wiz,$plxPlugin->bone);
-	$plxPlugin->bone = $plxPlugin->updateBoneString('@###ADMINTOPBOTTOMWIZARD###@',$WizardAdminTopBottom,$plxPlugin->bone);
+	$plxPlugin->bone = $plxPlugin->updateBoneString('@###ADMINTOPBOTTOMWIZARD###@',$callWizard,$plxPlugin->bone);
 
 #injections des fonctions des hooks 
 	# la page statique
@@ -662,5 +667,4 @@
 	$plxPlugin->addFiletxt('lang/'.$plxPlugin->default_lang.'-help.php', $helpLang, $zipFile);
 	$plxPlugin->addRepertory('css',$zipFile);
 	$plxPlugin->addRepertory('img',$zipFile);
-	$plxPlugin->addRepertory('assets',$zipFile);
-
+	$plxPlugin->addRepertory('assets',$zipFile)
